@@ -1,5 +1,5 @@
-import React from 'react';
 import { useEffect } from "react"
+import Card from "./card.jsx"
 
 function DashBoard(){
     useEffect(()=>{
@@ -11,27 +11,17 @@ function DashBoard(){
     ,[])
 return (
     <>
-      <Card person={{ name:"aflah",qualification:"bca"}}/>
-      <Card person={{ name:"fasil",qualification:"bca"}}/>
- 
-    </>
+      {/* <Card person={{ name:"aflah",qualification:"bca"}}/>
+      <Card person={{ name:"fasil",qualification:"bca"}}/> */}
+      <Card>
+
+        <h1>aflah</h1>
+        <p>bca</p>
+      </Card>
+     </>
   
 )
+
 }
-function Card({person}){
-    useEffect(()=>{
-        console.log(" card mounted");
-          return()=>{
-        console.log(" card unmounted");
-    }  
-    }
-    ,[])
-return(
-    <React.Fragment>
-           <h2>{person.name}</h2>
-           <h2>{person.qualification}</h2>
-    </React.Fragment>
- 
-)
-}
+
 export default DashBoard
